@@ -53,8 +53,5 @@ extension SpotifyAPI: EndPointType {
         }
     }
     
-    
-    
-    
 }
 
