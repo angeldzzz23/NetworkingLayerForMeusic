@@ -78,13 +78,10 @@ struct NetworkManager {
                 let result = self.handleNetworkResponse(response)
                 switch result {
                 case .success:
-                    
-                    
                     guard let responseData = data else {
                         completion(nil, NetworkResponse.noData.rawValue)
                         return
                     }
-                    
                     
                     do {
                         print(responseData)

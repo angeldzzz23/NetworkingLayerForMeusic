@@ -9,12 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let networkManager = NetworkManager()
+//    let networkManager = NetworkManager()
+    let networkingManager = SpotNetworkingManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networkManager.getUser { movie, error in
+//        networkManager.getUser { movie, error in
+//            print(movie)
+//        }
+        
+        networkingManager.getToken { movie, error in
             print(movie)
         }
     }
