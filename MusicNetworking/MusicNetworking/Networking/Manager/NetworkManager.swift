@@ -18,6 +18,14 @@ enum NetworkResponse:String {
     case unableToDecode = "We could not decode the response."
 }
 
+enum NetworkEnvironment {
+    case qa
+    case production
+    case staging
+}
+
+
+
 enum Result<String>{
     case success
     case failure(String)
@@ -29,43 +37,8 @@ struct NetworkManager {
     static let MovieAPIKey = "7ef6917b87a13c2d4c6eb3cc5d12046e"
     static let MeusicToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImQ5YTIyMmUyLTk0MDctNGZhMy04MzlmLWQxMTJhNmQzMzYyNSIsImV4cCI6MTY3Mjk3MjY3N30.xzhpACEPvzpylUEWuTsXRibSS3mucLgvu9OncJJetL4"
     
-    let router = Router<MovieApi>()
     let router2 = Router<MeusicAPI>()
-    
-    func getNewMovies(page: Int, completion: @escaping (_ movie: [Movie]?,_ error: String?)->()){
-        router.request(.newMovies(page: page)) { data, response, error in
-            
-            if error != nil {
-                completion(nil, "Please check your network connection.")
-            }
-            
-            if let response = response as? HTTPURLResponse {
-                let result = self.handleNetworkResponse(response)
-                switch result {
-                case .success:
-                    guard let responseData = data else {
-                        completion(nil, NetworkResponse.noData.rawValue)
-                        return
-                    }
-                    do {
-                        print(responseData)
-                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
-                        print(jsonData)
-                        let apiResponse = try JSONDecoder().decode(MovieApiResponse.self, from: responseData)
-                        completion(apiResponse.movies,nil)
-                    }catch {
-                        print(error)
-                        completion(nil, NetworkResponse.unableToDecode.rawValue)
-                    }
-                case .failure(let networkFailureError):
-                    completion(nil, networkFailureError)
-                }
-            }
-        }
-    }
-    
-    
-    
+
     func logIn(email: String,password: String, completion: @escaping (_ movie: Login?,_ error: String?)->()) {
         router2.request(.login(email: email, password: password)) { data, response, error in
           
