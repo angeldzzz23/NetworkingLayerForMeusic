@@ -9,7 +9,10 @@ import Foundation
 
 
 struct Login: Codable {
-    var id, email, username, token: String?
+    var success: Bool?
+    var access: String?
+    var refresh: String?
+//    var id, email, username, token: String?
 }
 
 struct Register: Codable {
@@ -22,12 +25,13 @@ struct User: Codable {
     let email: String?
     let first_name, last_name, gender_name, DOB: String?
     let about_me: String?
-    let artists: [String]?
+    let artists: [Artists]?
     let skills: [Skills]?
     var genres: [Genres]?
     let pictures, video: String?
-    let youtub_vids, vimeo_vids: [String]?
-    let youtube_vids: [String]?
+    let vimeo_vids: [Vimeo]?
+    let youtube_vids: [Youtube]?
+    let nationalities: [Nationality]?
     
 }
 
@@ -38,11 +42,31 @@ struct Genres: Codable {
 }
 
 struct Skills: Codable {
-    // TODO:
     let skill_id: Int?
     let skill_name: String?
     
 }
 
+struct Artists:Codable {
+    var user_artist_id: Int?
+    var artist: String?
+}
 
+struct Youtube:Codable {
+    var youtube_id: Int?
+    // this is the id the we use for the request
+    var video_id: String?
+}
+
+struct Vimeo: Codable {
+    var vimeo_id: Int?
+    // this is the id the we use for the request
+    var video_id: String?
+}
+
+struct Nationality: Codable {
+    var nationality_id: Int?
+    // this is the id the we use for the request
+    var nationality_name: String?
+}
 

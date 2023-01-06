@@ -34,8 +34,8 @@ enum Result<String>{
 
 struct NetworkManager {
     static let environment : NetworkEnvironment = .production
-    static let MovieAPIKey = "7ef6917b87a13c2d4c6eb3cc5d12046e"
-    static let MeusicToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImQ5YTIyMmUyLTk0MDctNGZhMy04MzlmLWQxMTJhNmQzMzYyNSIsImV4cCI6MTY3Mjk3MjY3N30.xzhpACEPvzpylUEWuTsXRibSS3mucLgvu9OncJJetL4"
+    
+    static let MeusicToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImJmNWZjYmU5LTE5YmEtNDliNS05MGZmLWMxNDdjZjIwZWQxYiIsImV4cCI6MTY3MzA1MjM2M30.yc87zA0D8oXv5xEDsAkHxcuSp0svWetxQgZBdlcIiTA"
     
     let router2 = Router<MeusicAPI>()
 
