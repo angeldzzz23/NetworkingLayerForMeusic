@@ -29,8 +29,8 @@ struct User: Codable {
     let skills: [Skills]?
     var genres: [Genres]?
     let pictures, video: String?
-    let vimeo_vids: [Vimeo]?
-    let youtube_vids: [Youtube]?
+    let vimeo_vids: [Venice_Vimeo]?
+    let youtube_vids: [Venice_Youtube]?
     let nationalities: [Nationality]?
     
 }
@@ -52,13 +52,13 @@ struct Artists:Codable {
     var artist: String?
 }
 
-struct Youtube:Codable {
+struct Venice_Youtube:Codable {
     var youtube_id: Int?
     // this is the id the we use for the request
     var video_id: String?
 }
 
-struct Vimeo: Codable {
+struct Venice_Vimeo: Codable {
     var vimeo_id: Int?
     // this is the id the we use for the request
     var video_id: String?

@@ -27,6 +27,7 @@
 		1C559A402966810C00D226CD /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A3F2966810C00D226CD /* Spotify.swift */; };
 		1C559A422966812F00D226CD /* SpotifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A412966812F00D226CD /* SpotifyAPI.swift */; };
 		1C559A442966814000D226CD /* SpotifyNetworkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A432966814000D226CD /* SpotifyNetworkingModel.swift */; };
+		1CA21C0F29691F6200A6FA5D /* Youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA21C0E29691F6200A6FA5D /* Youtube.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		1C559A3F2966810C00D226CD /* Spotify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
 		1C559A412966812F00D226CD /* SpotifyAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyAPI.swift; sourceTree = "<group>"; };
 		1C559A432966814000D226CD /* SpotifyNetworkingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyNetworkingModel.swift; sourceTree = "<group>"; };
+		1CA21C0E29691F6200A6FA5D /* Youtube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youtube.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			children = (
 				1C559A352966611A00D226CD /* Login.swift */,
 				1C559A3F2966810C00D226CD /* Spotify.swift */,
+				1CA21C0E29691F6200A6FA5D /* Youtube.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				1C559A1F2966590F00D226CD /* EndPointType.swift in Sources */,
 				1C559A362966611A00D226CD /* Login.swift in Sources */,
 				1C559A092966581E00D226CD /* ViewController.swift in Sources */,
+				1CA21C0F29691F6200A6FA5D /* Youtube.swift in Sources */,
 				1C559A422966812F00D226CD /* SpotifyAPI.swift in Sources */,
 				1C559A2929665B1200D226CD /* JSONParameterEncoder.swift in Sources */,
 				1C559A052966581E00D226CD /* AppDelegate.swift in Sources */,
