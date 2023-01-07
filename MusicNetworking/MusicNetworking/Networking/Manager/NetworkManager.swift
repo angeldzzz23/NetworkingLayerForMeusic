@@ -37,6 +37,7 @@ struct NetworkManager {
     
     static let MeusicToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImJmNWZjYmU5LTE5YmEtNDliNS05MGZmLWMxNDdjZjIwZWQxYiIsImV4cCI6MTY3MzA1MjM2M30.yc87zA0D8oXv5xEDsAkHxcuSp0svWetxQgZBdlcIiTA"
     
+    
     let router2 = Router<MeusicAPI>()
 
     func logIn(email: String,password: String, completion: @escaping (_ movie: Login?,_ error: String?)->()) {
@@ -70,8 +71,7 @@ struct NetworkManager {
                     completion(nil, networkFailureError)
                 }
             }
-            
-            
+     
         }
    
     }
@@ -153,7 +153,7 @@ struct NetworkManager {
     
     
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
-      
+
         switch response.statusCode {
         case 200...299: return .success
         case 401...500: return .failure(NetworkResponse.authenticationError.rawValue)

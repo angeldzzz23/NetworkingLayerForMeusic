@@ -64,7 +64,7 @@ extension MeusicAPI: EndPointType {
         case .register(let email, let password):
             return .requestParameters(bodyParameters: ["email": email, "password": password], bodyEncoding: .jsonEncoding, urlParameters: nil)
         case .getUserInfo:
-            print(headers)
+
             return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: headers)
         default:
             return .request
