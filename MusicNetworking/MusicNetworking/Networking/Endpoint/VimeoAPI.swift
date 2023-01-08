@@ -13,13 +13,15 @@ public enum VimeoAPI {
 
 
 extension VimeoAPI: EndPointType {
+    
+    
     var baseURL: URL {
-        guard let url = URL(string: "https://api.vimeo.com/videos/524933864") else { fatalError("baseURL could not be configured.")}
+        guard let url = URL(string: "https://api.vimeo.com/videos/") else { fatalError("baseURL could not be configured.")}
         return url
     }
     
     var path: String {
-        ""
+        return "524933864"
     }
     
     var httpMethod: HTTPMethod {
@@ -31,7 +33,7 @@ extension VimeoAPI: EndPointType {
     }
     
     var headers: HTTPHeaders? {
-        return ["Content-Type": "application/json", "Accept": "application/json", "Authorization": "Bearer 8f1ed672031741802e74dd133a84cf02"]
+        return ["Content-Type": "application/json", "Accept": "application/json", "Authorization": "Bearer \(VimeoNetworkingManager.token)"]
     }
     
     

@@ -22,7 +22,7 @@ extension MeusicAPI: EndPointType {
     
     
     var environmentBaseURL : String {
-        switch NetworkManager.environment {
+        switch MeusicNetworkManager.environment {
         case .production: return "http://143.198.178.220:8000/"
         case .qa: return "No url"
         case .staging: return "no url"
@@ -75,7 +75,7 @@ extension MeusicAPI: EndPointType {
     var headers: HTTPHeaders? {
         switch self {
         case .getUserInfo:
-            return ["Authorization" : "Bearer \(NetworkManager.MeusicToken)"]
+            return ["Authorization" : "Bearer \(MeusicNetworkManager.MeusicToken)"]
         default:
             return nil
         }

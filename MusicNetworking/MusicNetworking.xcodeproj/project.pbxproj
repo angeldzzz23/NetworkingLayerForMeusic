@@ -21,12 +21,12 @@
 		1C559A2929665B1200D226CD /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A2829665B1200D226CD /* JSONParameterEncoder.swift */; };
 		1C559A2B29665B6C00D226CD /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A2A29665B6C00D226CD /* NetworkRouter.swift */; };
 		1C559A3029665D1900D226CD /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A2F29665D1900D226CD /* NetworkLogger.swift */; };
-		1C559A3429665DAB00D226CD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A3329665DAB00D226CD /* NetworkManager.swift */; };
-		1C559A362966611A00D226CD /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A352966611A00D226CD /* Login.swift */; };
+		1C559A3429665DAB00D226CD /* MeusicNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A3329665DAB00D226CD /* MeusicNetworkManager.swift */; };
+		1C559A362966611A00D226CD /* Meusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A352966611A00D226CD /* Meusic.swift */; };
 		1C559A38296661AE00D226CD /* MeusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A37296661AE00D226CD /* MeusicAPI.swift */; };
 		1C559A402966810C00D226CD /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A3F2966810C00D226CD /* Spotify.swift */; };
 		1C559A422966812F00D226CD /* SpotifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A412966812F00D226CD /* SpotifyAPI.swift */; };
-		1C559A442966814000D226CD /* SpotifyNetworkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A432966814000D226CD /* SpotifyNetworkingModel.swift */; };
+		1C559A442966814000D226CD /* SpotifyNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C559A432966814000D226CD /* SpotifyNetworkingManager.swift */; };
 		1CA21C0F29691F6200A6FA5D /* Youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA21C0E29691F6200A6FA5D /* Youtube.swift */; };
 		1CA21C112969380700A6FA5D /* YoutubeAPI .swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA21C102969380700A6FA5D /* YoutubeAPI .swift */; };
 		1CA21C1329694DDE00A6FA5D /* YoutubeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA21C1229694DDE00A6FA5D /* YoutubeNetworkManager.swift */; };
@@ -52,12 +52,12 @@
 		1C559A2829665B1200D226CD /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		1C559A2A29665B6C00D226CD /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		1C559A2F29665D1900D226CD /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
-		1C559A3329665DAB00D226CD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		1C559A352966611A00D226CD /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		1C559A3329665DAB00D226CD /* MeusicNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusicNetworkManager.swift; sourceTree = "<group>"; };
+		1C559A352966611A00D226CD /* Meusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meusic.swift; sourceTree = "<group>"; };
 		1C559A37296661AE00D226CD /* MeusicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusicAPI.swift; sourceTree = "<group>"; };
 		1C559A3F2966810C00D226CD /* Spotify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
 		1C559A412966812F00D226CD /* SpotifyAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyAPI.swift; sourceTree = "<group>"; };
-		1C559A432966814000D226CD /* SpotifyNetworkingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyNetworkingModel.swift; sourceTree = "<group>"; };
+		1C559A432966814000D226CD /* SpotifyNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyNetworkingManager.swift; sourceTree = "<group>"; };
 		1CA21C0E29691F6200A6FA5D /* Youtube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youtube.swift; sourceTree = "<group>"; };
 		1CA21C102969380700A6FA5D /* YoutubeAPI .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YoutubeAPI .swift"; sourceTree = "<group>"; };
 		1CA21C1229694DDE00A6FA5D /* YoutubeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeNetworkManager.swift; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 		1C559A1B2966587100D226CD /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				1C559A3329665DAB00D226CD /* NetworkManager.swift */,
-				1C559A432966814000D226CD /* SpotifyNetworkingModel.swift */,
+				1C559A3329665DAB00D226CD /* MeusicNetworkManager.swift */,
+				1C559A432966814000D226CD /* SpotifyNetworkingManager.swift */,
 				1CA21C1229694DDE00A6FA5D /* YoutubeNetworkManager.swift */,
 				1CD9415129696EB400692A04 /* VimeoNetworkManager.swift */,
 			);
@@ -167,7 +167,7 @@
 		1C559A2C29665CE100D226CD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1C559A352966611A00D226CD /* Login.swift */,
+				1C559A352966611A00D226CD /* Meusic.swift */,
 				1C559A3F2966810C00D226CD /* Spotify.swift */,
 				1CA21C0E29691F6200A6FA5D /* Youtube.swift */,
 				1CD94154296A48C100692A04 /* Vimeo.swift */,
@@ -248,14 +248,14 @@
 			files = (
 				1CA21C1329694DDE00A6FA5D /* YoutubeNetworkManager.swift in Sources */,
 				1C559A3029665D1900D226CD /* NetworkLogger.swift in Sources */,
-				1C559A442966814000D226CD /* SpotifyNetworkingModel.swift in Sources */,
+				1C559A442966814000D226CD /* SpotifyNetworkingManager.swift in Sources */,
 				1C559A2729665AB700D226CD /* URLParameterEncoder.swift in Sources */,
 				1C559A2529665A0D00D226CD /* ParameterEncoding.swift in Sources */,
 				1C559A402966810C00D226CD /* Spotify.swift in Sources */,
 				1C559A23296659A000D226CD /* HTTPTask.swift in Sources */,
 				1CD9415229696EB400692A04 /* VimeoNetworkManager.swift in Sources */,
 				1C559A1F2966590F00D226CD /* EndPointType.swift in Sources */,
-				1C559A362966611A00D226CD /* Login.swift in Sources */,
+				1C559A362966611A00D226CD /* Meusic.swift in Sources */,
 				1C559A092966581E00D226CD /* ViewController.swift in Sources */,
 				1CA21C0F29691F6200A6FA5D /* Youtube.swift in Sources */,
 				1C559A422966812F00D226CD /* SpotifyAPI.swift in Sources */,
@@ -266,7 +266,7 @@
 				1C559A052966581E00D226CD /* AppDelegate.swift in Sources */,
 				1C559A38296661AE00D226CD /* MeusicAPI.swift in Sources */,
 				1C559A2B29665B6C00D226CD /* NetworkRouter.swift in Sources */,
-				1C559A3429665DAB00D226CD /* NetworkManager.swift in Sources */,
+				1C559A3429665DAB00D226CD /* MeusicNetworkManager.swift in Sources */,
 				1C559A212966594E00D226CD /* HTTPMethod.swift in Sources */,
 				1C559A072966581E00D226CD /* SceneDelegate.swift in Sources */,
 			);

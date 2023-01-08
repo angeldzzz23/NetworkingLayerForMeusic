@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 // MARK: - Welcome
 struct VimeoItem: Codable {
     let uri, name, description, type: String?

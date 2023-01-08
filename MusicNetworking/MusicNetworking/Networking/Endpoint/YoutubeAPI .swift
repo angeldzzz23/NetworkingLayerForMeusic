@@ -19,7 +19,7 @@ extension YoutubeAPI: EndPointType {
     }
     
     var environmentBaseURL : String {
-        switch NetworkManager.environment {
+        switch MeusicNetworkManager.environment {
         case .production: return "https://youtube.googleapis.com/youtube/v3/videos"
         case .qa: return "none"
         case .staging: return "none"

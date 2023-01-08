@@ -7,8 +7,12 @@
 
 import Foundation
 
+
 struct VimeoNetworkingManager {
     static let key = "AIzaSyD8XaWOllqXg8yHDKE6ZKVAaUMZCNYYiKU"
+    
+    static let token  = "8f1ed672031741802e74dd133a84cf02"
+    
     
     let vimeoRouter = Router<VimeoAPI>()
     

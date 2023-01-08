@@ -18,7 +18,7 @@ public enum SpotifyAPI {
 extension SpotifyAPI: EndPointType {
      
     var environmentBaseURL : String {
-        switch NetworkManager.environment {
+        switch MeusicNetworkManager.environment {
         case .production: return "https://api.spotify.com"
         case .qa: return "none"
         case .staging: return "none"

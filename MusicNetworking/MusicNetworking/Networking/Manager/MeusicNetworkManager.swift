@@ -32,7 +32,7 @@ enum Result<String>{
 }
 
 
-struct NetworkManager {
+struct MeusicNetworkManager {
     static let environment : NetworkEnvironment = .production
     
     static let MeusicToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImJmNWZjYmU5LTE5YmEtNDliNS05MGZmLWMxNDdjZjIwZWQxYiIsImV4cCI6MTY3MzA1MjM2M30.yc87zA0D8oXv5xEDsAkHxcuSp0svWetxQgZBdlcIiTA"

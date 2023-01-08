@@ -15,7 +15,8 @@ struct YoutubeNetworkingManager {
     
     
     // this gives you the token
-    // we shoudl
+    // TODO: this one does not work
+    // throws a weird error that I dont know about.
     func getYoutubeVid(id: String, completion: @escaping (_ video: Video?,_ error: String?)->()) {
         
         
@@ -26,9 +27,7 @@ struct YoutubeNetworkingManager {
                 completion(nil, "Please check your network connection.")
             }
 
-            
-            
-            
+
             if let response = response as? HTTPURLResponse {
                 let result = self.handleNetworkResponse(response)
                 switch result {
@@ -57,6 +56,7 @@ struct YoutubeNetworkingManager {
         
     }
     
+    // this works, so we can use this 
     func getYoutubeVid2(id: String, completion: @escaping (Video?) -> Void) {
         
         // setting up the url
@@ -112,40 +112,6 @@ struct YoutubeNetworkingManager {
         }.resume()
     }
     
-    
-    
-//    func getArtists(artists: [String], completion: @escaping (_ artists: Spot_Artists_Results?,_ error: String?)->()) {
-//        //
-//        spotifyRouter.request(.gettingArtists(artists: "790FomKkXshlbRYZFtlgla,0XwVARXT135rw8lyw1EeWP")) { data, response, error in
-//
-//            if let response = response as? HTTPURLResponse {
-//                let result = self.handleNetworkResponse(response)
-//                switch result {
-//
-//                case .success:
-//                    guard let responseData = data else {
-//                        completion(nil, NetworkResponse.noData.rawValue)
-//                        return
-//                    }
-//
-//                    do {
-//                        print(responseData)
-//                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
-//                        print(jsonData)
-//                        let apiResponse = try JSONDecoder().decode(Spot_Artists_Results.self, from: responseData)
-//                        completion(apiResponse,nil)
-//                    }catch {
-//                        print(error)
-//                        completion(nil, NetworkResponse.unableToDecode.rawValue)
-//                    }
-//                case .failure(let networkFailureError):
-//                    completion(nil, networkFailureError)
-//                }
-//            }
-//
-//
-//        }
-//    }
     
     
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
